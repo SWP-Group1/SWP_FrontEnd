@@ -1,0 +1,56 @@
+
+/* Margin: 6px */
+
+.mx-6px {
+    margin-left: 6px !important;
+    margin-right: 6px !important;
+}
+
+.my-6px {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;   
+}
+
+.mr-6px {
+    margin-right: 6px !important;
+}
+
+.ml-6px {
+    margin-left: 6px !important;
+}
+
+.mt-6px {
+    margin-top: 6px !important;
+}
+
+.mb-6px {
+    margin-bottom: 6px !important;
+}
+
+/* Margin: 12px */
+
+.mx-12px {
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+}
+
+.my-12px {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;   
+}
+
+.mr-12px {
+    margin-right: 12px !important;
+}
+
+.ml-12px {
+    margin-left: 12px !important;
+}
+
+.mt-12px {
+    margin-top: 12px !important;
+}
+
+.mb-12px {
+    margin-bottom: 12px !important;
+}

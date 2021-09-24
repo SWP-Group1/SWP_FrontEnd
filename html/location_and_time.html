@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/loc_and_time_style.css">
+    </head>
+    <body>
+        
+        <!-- BEGIN: TOP BAR -->
+        <nav class="container-fluid">
+            <div id="top-bar-row" class="row">
+                <!-- BEGIN: TITLE -->
+                <div id="title" 
+                     class="col-12 col-lg-5 d-flex flex-row align-item-center">
+                    <img src="../icon/app_icon.svg">
+                    <p id="txt_title" class="text-white">
+                        Chọn thời gian và địa điểm
+                    </p>
+                </div>
+                <!-- END: TITLE -->
+
+                <!-- BEGIN: BUTTON SECTION -->
+                <div id="buttons_section" class="col-12 col-lg-7 d-flex px-0 pt-6px">
+                    <div style="width: 19%" class="pl-6px">
+                        <button class="top-btn btn btn-danger wh-full-parent">
+                            Tiếp tục
+                        </button>
+                    </div>
+                    <div style="width: 62%" class="px-6px">
+                        <input id="input-location" class="wh-full-parent" type="text" placeholder="Nhập địa điểm">
+                    </div>
+
+                    <div style="width: 19%" class="pr-6px">
+                        <button class="top-btn btn btn-secondary wh-full-parent ">
+                            Tìm kiếm
+                        </button>
+                    </div>
+                </div>
+                <!-- END: BUTTON SECTION -->
+            </div>
+        </nav>
+        <!-- END: TOP BAR -->
+
+        <!-- BEGIN: CHOOSE LOCATION & DATE SECTION -->
+        <div class="w-full-parent d-flex flex-row">
+            <div style="width: 88.916%" class="mt-12px">
+                <!-- BEGIN: CHOSEN LOCATIONS SECTION -->
+                <div style="height:46px" class="w-full-parent d-flex">
+                    <span style="width: 2px" class="bg-black d-block ml-12px mb-0"></span>
+                    <span style="min-width: 70px;"class="d-block mx-12px">
+                        <b>Đã chọn</b>
+                    </span>
+                   
+                    <div class="scrollmenu mx-6px">
+                        <div class="loc_slot filled"> 
+                            <p>Thư viện tầng 3</p>
+                            <span style="width: 1px; height: 45px;" class="bg-white"></span>
+                            <div class="btn_delete_loc">
+                                <img src="../icon/delete_location_icon.svg" class="m-auto">
+                            </div>
+                        </div>
+
+                        <div class="loc_slot focused"> <p class="invisible">*</p></div>
+
+                        <div class="loc_slot unfilled next"> 
+                            <div class="btn_add_loc">
+                                <img src="../icon/add_location_icon.svg" class="m-auto">
+                            </div>
+                        </div>
+
+                        <div class="loc_slot unfilled"> 
+                            <p class="invisible">*</p>
+                        </div>                  
+
+                        <div class="loc_slot unfilled"> <p class="invisible">*</p></div>
+                        <div class="loc_slot unfilled"> <p class="invisible">*</p></div>
+                        <div class="loc_slot unfilled"> <p class="invisible">*</p></div>
+                        <div class="loc_slot unfilled"> <p class="invisible">*</p></div>
+                      </div>
+
+                </div>
+                <!-- END: CHOSEN LOCATIONS SECTION -->
+
+                <!-- BEGIN: DATE & SLOT TABLE -->
+                <div id="date_and_time_table" class="d-flex justify-content-between">
+                    <div style="width: 15.5%; height: 12%; min-width: 150px;" class="bg-black">
+                        
+                    </div>
+                    
+                    <div style="width: 11.5%; height: 12%; min-width: 150px;" class="bg-black">
+                        
+                    </div>
+
+
+                    <div style="width: 11.5%; height: 12%; min-width: 150px;" class="bg-black">
+                        
+                    </div>
+
+                    <div style="width: 11.5%; height: 12%; min-width: 150px;" class="bg-black">
+                        
+                    </div>
+
+                    <div style="width: 11.5%; height: 12%; min-width: 150px;" class="bg-black">
+                        
+                    </div>
+
+                    <div style="width: 11.5%; height: 12%; min-width: 150px;" class="bg-black">
+                        
+                    </div>
+
+                    <div style="width: 11.5%; height: 12%; min-width: 150px;" class="bg-black">
+                        
+                    </div>
+
+                </div>
+                <!-- END: DATE & SLOT TABLE -->
+            </div >
+
+            <!-- BEGIN: LOCATION LIST -->
+            <div style="width: 11.084%">
+                <ul id="location_list" class="list-unstyled mr-6px mt-6px">
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div>
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- END: LOCATION LIST -->
+        </div>
+        <!-- END: CHOOSE LOCATION & DATE SECTION -->
+
+    </body>
+    <script src="bootstrap/bootstrap.min.js"></script>
+</html>

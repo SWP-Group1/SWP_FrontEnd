@@ -1,0 +1,154 @@
+@import url(general.css);
+
+
+/* TITLE */
+
+#title {
+    background-color: #F8693C;
+    padding: 9px;
+    border-radius: 0px 0px 6px 0px;
+}
+
+#txt_title {
+    padding-top: 1px;
+    margin-left: 14px;
+}
+
+#buttons_section {
+    height: 45px;
+}
+
+.button-section {
+    padding-left: 6px;
+    padding-top:12px;
+    padding-right: 6px;
+    padding-bottom: 0px;
+    height: 45px;
+}
+
+#input-location {
+    padding: 14px;
+}
+
+#title {
+    height: 45px;
+}
+
+
+/* CHOSEN LOCATIONS SECTION */
+
+#chosen_location_section {
+    overflow: auto;
+    white-space: nowrap;
+    width:100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.btn_add_loc {
+    height: 20px;
+    width: 20px;
+    margin: auto;
+}
+
+.add_button {
+    width: 20px;
+    height: 20px;
+}
+
+div.scrollmenu {
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    display: inline-block;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+}
+
+div.scrollmenu::-webkit-scrollbar {
+    display: none;
+}
+
+.loc_slot {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 160px;
+    height: 45px;
+    width: 19.5%;
+    margin-right: 0.5%;
+    background-color: #F4F4F4;
+    border-radius: 6px;
+}
+
+div.scrollmenu div > p {
+    color: white;
+    width: 85%;
+    text-align: center;
+    margin: 0px;
+}
+
+.btn_delete_loc {
+    width: 20%;
+    height: 100%;
+    display: flex;
+}
+
+.btn_add_loc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+} 
+    
+.loc_slot.filled {
+    background-color: #536CED;
+}
+
+.loc_slot.focused {
+    background-color: #C6C9D6;
+}
+
+
+/* LOCATION LIST */
+
+#location_list li > div {
+    width: 100%;
+    background-color: #536CED;
+    display: flex;
+    border-radius: 6px;
+    height: 43px;
+    margin-bottom: 6px;
+    
+}
+
+#location_list {
+    overflow-y: scroll;
+    white-space: nowrap;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    height: 85vh;
+}
+
+#location_list::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* DATE & TIME TABLE */
+
+
+#date_and_time_table {
+    height: 80vh;
+    width: 88.916%;
+    margin-right: 6px;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+table {
+    height: 100%;
+}
+
+table, th, td {
+    border: 1px black solid;
+}
