@@ -1,3 +1,5 @@
+@import url(general.css);
+
 * { 
     margin: 0;
     padding: 0;
@@ -41,6 +43,11 @@ header {
     color: #E5E5E5;
     
 }
+
+.headerTitleLeft > h5 {
+    opacity: 0.60;
+}
+
 .headerTitleRightContainer{
     padding: 0 0 0 0;
     color: #E5E5E5;
@@ -64,7 +71,7 @@ header {
 }
 .headerTitleRight3 button{
     color: #E5E5E5;
-    background: #DB4B4B;
+    background: #E64342;
     border-radius: 5px;
     width: 100%;
     border: none;
@@ -93,11 +100,9 @@ header {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #fff;
 }
 
 .containerIcon img{
-    height: auto;
-    width: 20px;
-    left: 20px;
+    height: 100%;
+    width: 100%;
 }

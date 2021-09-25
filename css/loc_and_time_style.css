@@ -137,18 +137,24 @@ div.scrollmenu div > p {
 /* DATE & TIME TABLE */
 
 
-#date_and_time_table {
+#date_and_slot_section {
     height: 80vh;
-    width: 88.916%;
     margin-right: 6px;
     margin-left: 12px;
     margin-top: 12px;
 }
 
-table {
-    height: 100%;
+#date_and_slot_table, th, td {
+    border: #5D5D5D 1px solid;
 }
 
-table, th, td {
-    border: 1px black solid;
+#week_infor_cell {
+    width: 16%;
+    padding-left: 10px;
 }
+
+.day_cell {
+    width: 11%;
+    padding-left: 10px;
+}
+
