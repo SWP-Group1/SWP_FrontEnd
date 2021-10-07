@@ -16,7 +16,7 @@
 }
 
 #buttons_section {
-    height: 10%;
+    height: 45px;
 }
 
 .button-section {
@@ -24,6 +24,7 @@
     padding-top:12px;
     padding-right: 6px;
     padding-bottom: 0px;
+    height: 45px;
 }
 
 #input_location {
@@ -31,6 +32,7 @@
 }
 
 #title {
+    height: 45px;
 }
 
 
@@ -182,6 +184,11 @@ div.scrollmenu div > p {
     border-right: none !important;
 }
 
+.last_day_cell {
+    border-radius: 0px 5px 0px 0px;
+}
+
+
 #date_and_slot_table, td {
     border-top: #5d5d5d 0.7px solid;
     border-right: #5d5d5d 0.7px solid;
@@ -201,7 +208,12 @@ div.scrollmenu div > p {
     padding-bottom: 10px;
 }
 
-.disabled_cell
+.disabled_cell {
+    width: 12.3%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #b0b0b0;
+}
 
 .day_cell span {
     text-align: center;
