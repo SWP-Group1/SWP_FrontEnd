@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     
+    
+    
 }
 /* Header */
 
@@ -191,168 +192,354 @@
     color: #1472E1;
 }
 
-/* Button */
-.button{
-    box-shadow: -7px 7px #c4c4c4;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 7px 15px;
-    height: 60px;
-    margin: 2rem;
-    border: 2px solid #C4C4C4;
+
+
+ 
+
+/* Second 1*/
+.second1 img{
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Second 2 */
+.second2{
+    font-weight: 800;
+    margin: -10rem 2rem;
+    position: absolute;
     display: flex;
-    justify-content:space-between;
+    justify-content: start;
 }
-/* button Word */
-.buttonWord{
-    padding: 0.5rem;
-    color: #1472E1;
-    font-size: 17px;
-    font-weight: 900;
+.second2Img img{
+    padding: 0 1rem;
+    height: 110px;
 }
-/* button Action */
-.buttonAction{
+
+/* Second2Line */
+.second2Line{ 
+    /* background-color: rgba(57,15,17,255); */
+   margin-top: 3rem;
+    height: 50px;
+    border-radius: 20px;
+    border: 2px solid #311412;
+    display: flex;
+}
+.second2Line:hover{
+    background-color: black;
+}
+
+.dot{
+    padding: auto;
+    margin: 10px 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.second2Line1{
+    color: #FFF;
+    text-align: center;
     display: flex;
     justify-content: center;
+    margin: 10px 30px;
 }
-/* Button Action 1 Button */
-.buttonAction1 button{
-    background-color:#1472E1;
-    font-weight: 600;
-    border-radius: 5px;
-    width: 70px;
-    height: 40px;
-    border: 1px solid;
-    color: #fff;
-}
-.buttonAction1 button:hover{
-    background-color: #25be2f; 
-}
-/* Button Action 2 Button */
-
-.buttonAction2 button{
-    background-color: #1472E1;
-    color: #FFF;
-    border: 1px solid;
-    font-weight: 600;
-    border-radius: 5px;
-    width: 105px;
-    height: 40px;
-}
-.buttonAction2 button:hover{
-    background-color: #25be2f; 
-}
-.container{
-    padding: 0.5rem;
+.second2Line1:hover{
+    color: blue;
 }
 
-/* Row */
-.row {
-    margin: auto 0;
-}
 
-.row>* {
-    padding: 0.5rem;
-}
-/* item */
-.item{
-    box-shadow: -2px 2px #c4c4c4, 2px -2px #c4c4c4;
-    border-radius: 5px;
-    border: 2px solid #C4C4C4;
-}
-/* Item 1 Img */
-.item1 img{
-    height:225px;
-    width: 100%;
-    padding: 0.5rem;
-}
-/* Item 1 Word */
-.item1Word{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    padding: 1rem 2rem;
-}
-.item1Word h4{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    font-weight:900;
-   color: #f15827;
-}
-.item1Word h4:hover{
-    overflow: visible;
-    
-}
-.item1Word p{
-    word-wrap:break-word;
-   white-space: nowrap;
-    overflow: hidden;
-    text-overflow:ellipsis;
-}   
-.item1Word p:hover{
-    overflow:visible;
-}
-
-/* item2 */
-.item2{ 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    padding: 0 2rem;
+/*  Carousel */
+.carousel{
     display: flex;
-    justify-content:space-between
+    justify-content:space-between;
+   padding: 2rem;
 }
-/* Item 2 Img 1 */
-.item2Img1{
+.carouselWrite h3{
+    font-weight: 700;
+    color: red;
+}
+
+/* Carousel Button */
+.carouselButton{
+    
     display: flex;
+   justify-content:center;
+   align-items: center;
 }
-.item2Img1 p{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow:ellipsis;
-    font-size: 15px;
-    font-weight: 300;
-    margin: 0.5rem;
-}
-.item2Img1 img{
-    height: 30px;
+
+.carouselButton1{
     
-    width: 30px;
-    margin: 0.5rem 0rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
-/* Item2 Button */
-.item2Button{
-    
-    margin: 1rem;
+.carouselButton1 img{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
 }
-.item2Button button{
+.carouselButton1 p{
+    margin: 0
+}
+.carouselButton1 button{
     border: none;
-    font-weight: 500;
-    width: 90px;
-    border-radius: 3px;
-    height: 45px;
+    margin-left: 0 1rem;
+    font-weight: 400;
     color: #FFF;
-    background-color: #1472E1; 
-    margin-right: -1rem;
+    background: #1472E1;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
 }
-/* END */
-.end{
-   color: #fff;
-    background-color: #f15827;
-    text-align: center;
-    border: 10px solid #f15827;
-    height: 170px;
-    margin: 5rem 0 0 0;
-    padding: 3rem 0;
+.carouselButton1 .hight{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    width: 100%;
+}
+/* Fast Word */
+.fastWord{
+    
+    padding: 0 2rem;
+
+}
+.fastWord h1{
+    font-size: 50px;
+}
+.fastWord p{
+    font-weight: 700;
+    font-size: 25px;
+    color: #c8c8c8;
 }
 
 
 
+/* NAV */
+.navWord{
+    padding: 2rem;
+}
+.navWord h3{
+    font-weight: 700;
+}
+.navWord p{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+/* Single */
+.single{
+    padding: 2rem 8rem;
+    font-weight: 800;
+}
 
 
+/* Container */
+.item{
+    border-radius: 7px;
+    box-shadow: -1px 1px #c4c4c4, 1px -1px #c4c4c4;
+    text-align: center;
+    border: 1px solid #c4c4c4;
+}
+.item p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.item p:hover{
+    overflow:visible;
+}
+.row{
+    padding: 1rem;
+}
+.item h5{
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.item h5:hover{
+    overflow: visible;
+}
+
+
+/* Next */
+.next{
+    padding: 1rem 8rem;
+}
+.next2{
+    display: flex;
+    
+}
+.next2 img{
+    
+    height: 50px;
+    width: 50px;
+}
+.next2Document{
+    margin: 0 1rem;
+}
+
+.next1 h4{
+    font-weight: 700;
+}
+.next2Document h5{
+    font-weight: 700;
+}
+/* Comment */
+
+.comment{
+    padding: 2rem;
+}
+.comment input{
+    font-style: italic;
+    padding-left: 2rem;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #c4c4c4;
+    border-radius: 30px;
+    font-weight: 300;
+}
+/* Avatar Comment */
+.avatarComment{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+
+}
+
+.avatarComment2{
+    margin:0 1rem;
+}
+
+/* ASK */
+.ask{
+    display:grid;
+    padding: 2rem;
+    
+}
+.ask textarea{
+    padding: 15px;
+    height: 150px;
+    resize: vertical;
+    border-radius: 15px;
+    border: 1px solid #c4c4c4;  
+}
+/* Ask Buuton */
+.sendButton{
+    margin-top: 20px;
+    width: 60px;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    align-content: flex-start;
+}
+.sendButton:hover{
+    color: #fff;
+    background-color: #1472E1;
+}
+
+/* REP */
+.rep{
+    padding: 2rem 5rem;
+}
+.repComment{
+    display: flex;
+}
+.rep1 img{
+    margin-top: 12px;
+    width: 50px;
+    height: 50px;
+}
+.rep2{
+    font-weight: 700;
+}
+.rep2 p{
+    word-wrap: break-word;
+}
+.repComment .rep2{
+    margin: 1rem;
+}
+/* Rep Comment2 */
+.repComment2{
+    margin: 0 100px;
+    display: flex;
+}
+.repComment2a img{
+    margin-top: 12px;
+    width: 50px;
+    height: 50px;
+}
+.repComment2b {
+    font-weight: 700;
+    margin: 1rem;
+}
+.repComment2b p{
+    word-wrap: break-word;
+}
+
+/* END */
+.end{
+    color: #fff;
+     background-color: #f15827;
+     text-align: center;
+     border: 10px solid #f15827;
+     height: 170px;
+     margin: 5rem 0 0 0;
+     padding: 3rem 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     width: 100%;
+ }
+
+ @media only screen and (max-width: 576px) {
+    .second1 img {
+        height: 250px;
+        object-fit: cover;
+    }
+    .second2 {
+        margin: -8rem 0;
+    }
+    .second2Line {
+        height: 120px;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .carousel{
+        flex-direction: column;
+    }
+    .fastWord h1 {
+        font-size: 26px;
+    }
+    .carouselWrite h3 {
+        font-size: 20px;
+    }
+
+    .second2Line1 {
+        /* color: #FFF;
+        text-align: center;
+        display: flex;
+        justify-content: center; */
+        margin: 10px 5px;
+    }
+
+    .item {
+        margin: 0.5rem 0;
+        padding: 0.5rem 0;
+    }
+    .next {
+        padding: 1rem;
+    }
+    .rep {
+        padding: 1rem;
+    }
+    .repComment2 {
+        margin: 0 30px;
+    }
+    .avatarComment1{
+        margin-top: -28px;
+    }
+  }
