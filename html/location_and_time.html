@@ -10,7 +10,7 @@
     <body>
         
         <!-- BEGIN: TOP BAR -->
-        <nav class="container-fluid">
+        <nav class="container-fluid" style="height: 10%; background-color: black">
             <div id="top-bar-row" class="row">
                 <!-- BEGIN: TITLE -->
                 <div id="title" 
@@ -25,7 +25,7 @@
                 <!-- BEGIN: BUTTON SECTION -->
                 <div id="buttons_section" class="col-12 col-lg-7 d-flex px-0 pt-6px">
                     <div style="width: 19%" class="pl-6px">
-                        <button id="btn_continue" onclick="sendGetRequest()" class="top-btn btn bg-mn-orange text-white wh-full-parent">
+                        <button id="btn_continue" onclick="sendGetRequest('continue')" class="top-btn btn bg-mn-orange text-white wh-full-parent">
                             Tiếp tục
                         </button>
                     </div>
@@ -34,7 +34,7 @@
                     </div>
 
                     <div style="width: 19%" class="pr-6px">
-                        <button class="top-btn btn btn-secondary wh-full-parent ">
+                        <button onclick="sendGetRequest('searchLocation')" class="top-btn btn btn-secondary wh-full-parent ">
                             Tìm kiếm
                         </button>
                     </div>
@@ -81,328 +81,25 @@
                         <h4 class="d-block mx-auto">Chọn địa điểm</h4>
                     </div>
                     <table id="date_and_slot_table" class="wh-full-parent">
-                        <thead>
+                        <thead id="date_and_slot_table_header">
                             <tr id="day_row">
-                            <th id="week_infor_cell">
+                                <th id="week_infor_cell">
                                 <div> 
-                                    <span>Week<span>
-                                    <select id="week_option">
-                                        <option>20/09 - 26/09</option>
-                                        <option>27/09 - 02/10</option>
-                                        <option>03/10 - 09/10</option>
-                                        <option>10/10 - 16/10</option>
-                                        <option>17/10 - 23/10</option>
+                                    <span style="width: 40%;">Year</span>
+                                    
+                                    <select style="width: 60%; float: right;" id="year_option" class="inline-block">
+
+                                    </select>
+
+                                    <select id="week_option" class="w-full-parent">
+                                        
                                     </select>
                                 </div>
-                            </th>
-                            <th class="day_cell">
-                                <div>
-                                    <span class="day">Thứ 2</span> 
-                                    <span class="date">20/09</span>
-                                </div>
-                            </th>
-                            <th class="day_cell">
-                                <div>
-                                    <span class="day">Thứ 3</span> 
-                                    <span class="date">21/09</span>
-                                </div>
-                            </th>
-                            <th class="day_cell">
-                                <div>
-                                    <span class="day">Thứ 4</span> 
-                                    <span class="date">22/09</span>
-                                </div>
-                            </th>
-                            <th class="day_cell">
-                                <div>
-                                    <span class="day">Thứ 5</span> 
-                                    <span class="date">23/09</span>
-                                </div>
-                            </th>
-                            <th class="day_cell">
-                                <div>
-                                    <span class="day">Thứ 6</span> 
-                                    <span class="date">24/09</span>
-                                </div>
-                            </th>
-                            <th class="day_cell">
-                                <div>
-                                    <span class="day">Thứ 7</span> 
-                                    <span class="date">25/09</span>
-                                </div>
-                            </th>
-                            <th class="day_cell last_day_cell">
-                                <div>
-                                    <span class="day">Chủ Nhật</span>
-                                    <span class="date">26/09</span>
-                                </div>
-                            </th>
+                                </th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr class="slot_row">
-                                <!-- BEGIN: SLOT 1 -->
-                                <td class="slot_cell">
-                                    <div >
-                                        <span class="slot_span">Slot 1<span>
-                                        <span class="time_range_span">7:00 - 8:30</span>
-                                    </div>
-                                </td>
-
-                                <td onclick="onSlotClick(this)" id="1-1" >
-
-                                </td>
-                                <td onclick="onSlotClick(this)" id="1-2" >
-                                    
-                                </td>
-                                <td onclick="onSlotClick(this)" id="1-3" >
-                                    
-                                </td>
-                                <td onclick="onSlotClick(this)" id="1-4" >
-                                    
-                                </td>
-                                <td onclick="onSlotClick(this)" id="1-5" >
-                                    
-                                </td>
-                                <td onclick="onSlotClick(this)" id="1-6" >
-                                    
-                                </td>
-                                <td onclick="onSlotClick(this)" id="1-7" class="last_row_cell">
-                                    
-                                </td>
-                            </tr>
-                            <!-- END: SLOT 1 -->
-
-                            <!-- BEGIN: SLOT 2 -->
-                            <tr class="slot_row">
-                            
-                                <td class="slot_cell">
-                                    <div>
-                                        <span class="slot_span">Slot 2<span>
-                                        <span class="time_range_span">8:45 - 10:15</span>
-                                    </div>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td class="last_row_cell">
-                                    
-                                </td>
-                            </tr>
-                            <!-- END: SLOT 2 -->
-                            
-                            <!-- BEGIN: SLOT 3 -->
-                            <tr class="slot_row">
-                            
-                                <td class="slot_cell">
-                                    <div>
-                                        <span class="slot_span">Slot 3<span>
-                                        <span class="time_range_span">10:30 - 12:00</span>
-                                    </div>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td class="last_row_cell">
-                                    
-                                </td>
-                            </tr>
-                            <!-- END: SLOT 3 -->
-                            
-                            <!-- BEGIN: SLOT 4 -->
-                            <tr class="slot_row">
-                                <td class="slot_cell">
-                                    <div>
-                                        <span class="slot_span">Slot 4<span>
-                                        <span class="time_range_span">12:30 - 14:00</span>
-                                    </div>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td class="last_row_cell">
-                                    
-                                </td>
-                            </tr>
-                            <!-- END: SLOT 4 -->
-                            
-                            <!-- BEGIN: SLOT 5 -->
-                            <tr class="slot_row">
-                            
-                                <td class="slot_cell">
-                                    <div>
-                                        <span class="slot_span">Slot 5<span>
-                                        <span class="time_range_span">14:15 - 15:45</span>
-                                    </div>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td class="last_row_cell"> 
-                                    
-                                </td>
-                            </tr>
-                            <!-- END: SLOT 5 -->
-                            
-                            <!-- BEGIN: SLOT 6 -->
-                            <tr class="slot_row">
-                            
-                                <td class="slot_cell">
-                                    <div>
-                                        <span class="slot_span">Slot 6<span>
-                                        <span class="time_range_span">16:00 - 17:30</span>
-                                    </div>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td class="last_row_cell">
-                                    
-                                </td>
-                            </tr>
-                            <!-- END: SLOT 6 -->
-                            
-                            <!-- BEGIN: SLOT 7 -->
-                            <tr class="slot_row">
-                            
-                                <td class="slot_cell">
-                                    <div>
-                                        <span class="slot_span">Slot 7<span>
-                                        <span class="time_range_span">17:45 - 19:15</span>
-                                    </div>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td class="last_row_cell">
-                                    
-                                </td>
-                            </tr>
-                            <!-- END: SLOT 7 -->
-                            
-                            <!-- BEGIN: SLOT 8 -->
-                            <tr class="slot_row">
-                                <td class="slot_cell">
-                                    <div>
-                                        <span class="slot_span">Slot 8<span>
-                                        <span class="time_range_span">19:30 - 21:00</span>
-                                    </div>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td>
-                                    
-                                </td>
-                                <td class="last_row_cell">
-                                    
-                                </td>
-
-                            </tr>
-                            <!-- END: SLOT 8 -->
-                            
+                        <tbody id="date_and_slot_table_body">
+                           
                         </tbody>
                     </table>
                 </div>
@@ -410,156 +107,156 @@
             </div >
 
             <!-- BEGIN: LOCATION LIST -->
-            <div style="width: 11.084%">
+            <div id="location_list_section" style="width: 11.084%">
                 <div id="loc_list_disable_layer"></div>
                 <ul id="location_list" class="list-unstyled mr-6px mt-6px">
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Thư viện tầng 3</p>
+                        <div id="TVT3" onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Thư viện tầng 3</p>
                         </div>
                     </li>
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Thư viện tầng 2</p>
+                        <div id="TVT2" onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Thư viện tầng 2</p>
                         </div>
                     </li>
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Thư viện tầng 1</p>
+                        <div id="TVT1" onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Thư viện tầng 1</p>
                         </div>
                     </li>
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 101</p>
+                        <div id="P101" onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 101</p>
                         </div>
                     </li>
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 102</p>
+                        <div id="P102" onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 102</p>
                         </div>
                     </li>
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 103</p>
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 103</p>
                         </div>
                     </li>
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 104</p>
-                        </div>
-                    </li>
-
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 105</p>
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 104</p>
                         </div>
                     </li>
 
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 201</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 202</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 203</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 204</p>
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 105</p>
                         </div>
                     </li>
 
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 205</p>
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 201</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 202</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 203</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 204</p>
                         </div>
                     </li>
 
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 301</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 302</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 303</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 304</p>
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 205</p>
                         </div>
                     </li>
 
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 305</p>
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 301</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 302</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 303</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 304</p>
                         </div>
                     </li>
 
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 301</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 302</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 303</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 304</p>
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 305</p>
                         </div>
                     </li>
 
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 305</p>
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 301</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 302</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 303</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 304</p>
                         </div>
                     </li>
 
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 301</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 302</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 303</p>
-                        </div>
-                    </li>
-                    <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 304</p>
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 305</p>
                         </div>
                     </li>
 
                     <li> 
-                        <div class="loc_item">
-                            <p onclick="onAddLocationClick(this)" class="m-auto text-white">Phòng 305</p>
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 301</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 302</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 303</p>
+                        </div>
+                    </li>
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 304</p>
+                        </div>
+                    </li>
+
+                    <li> 
+                        <div onclick="onAddLocationClick(this)" class="loc_item">
+                            <p class="m-auto text-white">Phòng 305</p>
                         </div>
                     </li>
                     
@@ -573,7 +270,7 @@
             <span class="d-none">dynamic_content_created_by_javascript</span>
         </div>
 
-    <script src="bootstrap/bootstrap.min.js"></script>
-    <script src="../js/loc_and_time.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="../js/loc_and_time.js"></script>
     </body>
 </html>

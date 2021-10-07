@@ -16,7 +16,7 @@
 }
 
 #buttons_section {
-    height: 45px;
+    height: 10%;
 }
 
 .button-section {
@@ -24,7 +24,6 @@
     padding-top:12px;
     padding-right: 6px;
     padding-bottom: 0px;
-    height: 45px;
 }
 
 #input_location {
@@ -32,7 +31,6 @@
 }
 
 #title {
-    height: 45px;
 }
 
 
@@ -112,6 +110,10 @@ div.scrollmenu div > p {
 
 /* LOCATION LIST */
 
+#location_list_section {
+    position: relative;
+}
+
 #loc_list_disable_layer {
     position: absolute;    
     width: 100%;
@@ -188,6 +190,7 @@ div.scrollmenu div > p {
 #week_infor_cell {
     width: 13.9%;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* day cells */
@@ -197,6 +200,8 @@ div.scrollmenu div > p {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.disabled_cell
 
 .day_cell span {
     text-align: center;
