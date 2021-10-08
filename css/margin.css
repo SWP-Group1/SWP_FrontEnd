@@ -27,6 +27,90 @@
     margin-bottom: 6px !important;
 }
 
+/* Margin: 8px */
+
+.mx-8px {
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+}
+
+.my-8px {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;   
+}
+
+.mr-8px {
+    margin-right: 8px !important;
+}
+
+.ml-8px {
+    margin-left: 8px !important;
+}
+
+.mt-8px {
+    margin-top: 8px !important;
+}
+
+.mb-8px {
+    margin-bottom: 8px !important;
+}
+
+/* Margin: 9px */
+
+.mx-9px {
+    margin-left: 9px !important;
+    margin-right: 9px !important;
+}
+
+.my-9px {
+    margin-top: 9px !important;
+    margin-bottom: 9px !important;   
+}
+
+.mr-9px {
+    margin-right: 9px !important;
+}
+
+.ml-9px {
+    margin-left: 9px !important;
+}
+
+.mt-9px {
+    margin-top: 9px !important;
+}
+
+.mb-9px {
+    margin-bottom: 9px !important;
+}
+
+/* Margin: 10px */
+
+.mx-10px {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.my-10px {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;   
+}
+
+.mr-10px {
+    margin-right: 10px !important;
+}
+
+.ml-10px {
+    margin-left: 10px !important;
+}
+
+.mt-10px {
+    margin-top: 10px !important;
+}
+
+.mb-10px {
+    margin-bottom: 10px !important;
+}
+
 /* Margin: 12px */
 
 .mx-12px {

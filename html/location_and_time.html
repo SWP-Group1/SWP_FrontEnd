@@ -10,31 +10,31 @@
     <body>
         
         <!-- BEGIN: TOP BAR -->
-        <nav class="container-fluid" style="height: 10%; background-color: black">
-            <div id="top-bar-row" class="row">
+        <nav id="top_bar" class="container-fluid">
+            <div id="top_bar_row" class="row">
                 <!-- BEGIN: TITLE -->
                 <div id="title" 
-                     class="col-12 col-lg-5 d-flex flex-row align-item-center">
+                     class="col-4 col-lg-5 d-flex flex-row align-item-center">
                     <img src="../icon/app_icon.svg">
-                    <p id="txt_title" class="text-white">
+                    <span id="txt_title" class="text-white">
                         Chọn thời gian và địa điểm
-                    </p>
+                    </span>
                 </div>
                 <!-- END: TITLE -->
 
                 <!-- BEGIN: BUTTON SECTION -->
-                <div id="buttons_section" class="col-12 col-lg-7 d-flex px-0 pt-6px">
-                    <div style="width: 19%" class="pl-6px">
+                <div id="buttons_section" class="col-8 col-lg-7 d-flex px-0 pt-10px">
+                    <div style="width: 19%" class="pl-8px">
                         <button id="btn_continue" onclick="sendGetRequest('continue')" class="top-btn btn bg-mn-orange text-white wh-full-parent">
                             Tiếp tục
                         </button>
                     </div>
-                    <div style="width: 62%" class="px-6px">
+                    <div style="width: 62%" class="px-9px">
                         <input id="input_location" class="wh-full-parent" type="text" placeholder="Nhập địa điểm">
                     </div>
 
-                    <div style="width: 19%" class="pr-6px">
-                        <button onclick="sendGetRequest('searchLocation')" class="top-btn btn btn-secondary wh-full-parent ">
+                    <div style="width: 19%" class="pr-8px">
+                        <button id="btn_search" onclick="sendGetRequest('searchLocation')" class="top-btn btn bg-hard-gray text-white wh-full-parent ">
                             Tìm kiếm
                         </button>
                     </div>
@@ -46,30 +46,43 @@
 
         <!-- BEGIN: CHOOSE LOCATION & DATE SECTION -->
         <div class="w-full-parent d-flex flex-row">
-            <div style="width: 88.916%" class="mt-12px">
+            <div style="width: 88.916%">
                 <!-- BEGIN: CHOSEN LOCATIONS SECTION -->
-                <div style="height:46px" class="w-full-parent d-flex">
-                    <span style="width: 2px" class="bg-black d-block ml-12px mb-0"></span>
-                    <span style="min-width: 70px;"class="d-block mx-12px">
-                        <b>Đã chọn</b>
-                    </span>
+                <div id="chosen_location_section" class="w-full-parent d-flex">
+                    <span style="width: 1px" class="bg-black d-block ml-9px mb-0"></span>
+                    <div style="max-width: 70px;"class="d-inline-block mx-8px">
+                        <b>Địa điểm <br/> đã chọn</b>
+                    </div>
                    
-                    <div class="scrollmenu mx-6px">
+                    <div class="scrollmenu mr-8px">
                         <div class="loc_slot focused"> 
                             <p class="invisible">*</p>
                          </div>
                          
                         <!-- SOME PROTOTYPE BUTTON - Just for reminder when I don't remember
                         how the buttons are -->
-                        <!-- <div onclick="focusNewTab()" class="loc_slot unfilled next"> 
+                        <div onclick="focusNewTab()" class="loc_slot unfilled next"> 
                             <div class="btn_add_loc">
                                 <img src="../icon/add_location_icon.svg" class="m-auto">
                             </div>
-                        </div> -->
+                        </div>
 
-                        <!-- <div class="loc_slot unfilled"> 
+                        <div class="loc_slot unfilled"> 
                             <p class="invisible">*</p>
-                        </div>                  -->
+                        </div>   
+                        <div class="loc_slot unfilled"> 
+                            <p class="invisible">*</p>
+                        </div>   
+                        <div class="loc_slot unfilled"> 
+                            <p class="invisible">*</p>
+                        </div>   
+                        <div class="loc_slot unfilled"> 
+                            <p class="invisible">*</p>
+                        </div>   
+                        <div class="loc_slot unfilled"> 
+                            <p class="invisible">*</p>
+                        </div>   
+
                       </div>
 
                 </div>
@@ -85,7 +98,7 @@
                             <tr id="day_row">
                                 <th id="week_infor_cell">
                                 <div> 
-                                    <span style="width: 40%;">Year</span>
+                                    <span style="width: 40%;">Năm</span>
                                     
                                     <select style="width: 60%; float: right;" id="year_option" class="inline-block">
 
@@ -109,7 +122,7 @@
             <!-- BEGIN: LOCATION LIST -->
             <div id="location_list_section" style="width: 11.084%">
                 <div id="loc_list_disable_layer"></div>
-                <ul id="location_list" class="list-unstyled mr-6px mt-6px">
+                <ul id="location_list" class="list-unstyled">
                     <li> 
                         <div id="TVT3" onclick="onAddLocationClick(this)" class="loc_item">
                             <p class="m-auto text-white">Thư viện tầng 3</p>
@@ -254,7 +267,7 @@
                         </div>
                     </li>
 
-                    <li> 
+                    <li id="last_child"> 
                         <div onclick="onAddLocationClick(this)" class="loc_item">
                             <p class="m-auto text-white">Phòng 305</p>
                         </div>
@@ -272,5 +285,6 @@
 
         <script src="bootstrap/bootstrap.min.js"></script>
         <script src="../js/loc_and_time.js"></script>
+
     </body>
 </html>

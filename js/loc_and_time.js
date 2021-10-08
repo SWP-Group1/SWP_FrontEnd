@@ -1,3 +1,13 @@
+function setLastLocationItemHeight () {
+    var locList = document.getElementById("location_list");
+    var liList = locList.getElementsByTagName("li");
+    if (liList.length > 0) {
+        var lastChild = liList[liList.length - 1];
+        console.log(lastChild);
+    }
+    
+}
+
 //////////////////////|
 //// CREATE TABLE ////|
 //////////////////////|
@@ -11,6 +21,7 @@ createWeekList(today(), true);
 createYearList();
 createDateSlotTableHeader(today());
 createDateSlotTableBody();
+setLastLocationItemHeight();
 
 function createDateSlotTableHeader (aDate) {
     createDayOfWeekList(aDate);
