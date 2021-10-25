@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin</title>
+    <link rel="stylesheet" href="../Admin/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+
+    <!-- nhúng JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <div class="header1" id="b">
+
+            <div class="header3">
+                <div class="link">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageByAdmin?management=organizer">Organizer
+                            Management
+                            <i class="mega-octicon octicon-organization"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageByAdmin?management=student">Student
+                            Management</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageByAdmin?management=lecturer">Lecturer
+                            Management</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageByAdmin?management=event">Event Management</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="manageByAdmin?management=comment">Comment
+                            Management</a>
+                    </li>
+
+                </div>
+
+                <div class="wrapper">
+
+                    <div class="navbar-toggle" id="a">
+                    </div>
+                </div>
+
+                <div class="title">
+                    <p> FRESH REPORT </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="header2">
+            <div class="login">
+                <div>
+                    <p>Class Management</p>
+                </div>
+                <div class="adminLogin">
+
+                    <a href="#">Admin</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header4">
+            <div class="banner">
+                <button>Import Classes</button>
+                <button>Import Class Information</button>
+                <button>Import Internships</button>
+                <button>Add Class Planning</button>
+            </div>
+
+            <div class="select">
+                <div class="select1">
+                    <p>Search:</p>
+                    <input type="text" placeholder="Information Search">
+                </div>
+                <div class="select1">
+                    <p>Page Size:</p>
+                    <input type="text">
+                </div>
+            </div>
+
+
+            <div class="service" >
+                <table border="2" >
+
+                    <tr class="service1">
+                        <th colspan="1" >No</th>
+                        <th colspan="1" >Email</th>
+                        <th colspan="2">Name</th>
+                        <th colspan="2">Avatar</th>
+                        <th colspan="3">Phone Number</th>
+                        <th colspan="2">Role Name</th>
+                        <th colspan="2">Status</th>
+                        <th colspan="2">Description</th>
+                        <th colspan="2">NumOfEvent</th>
+                        <th colspan="4">Deactivate</th>
+                    </tr>
+
+
+
+                    <tr class="service2">
+                        <td colspan="1">1</td>
+                        <td colspan="1">uocnnse140739@fpt.edu.vn</td>
+                        <td colspan="2">Ngọc Ước</td>
+                        <td colspan="2">.....</td>
+                        <td colspan="3">0123456789</td>
+                        <td colspan="2">Nam</td>
+                        <td colspan="2">online</td>
+                        <td colspan="2">no Information</td>
+                        <td colspan="2">2</td>
+                        <td colspan="4">
+                            <form action="manageUserByAdmin" method="POST">
+                                <div>
+                                    <input type="hidden" name="userId" value="${organizer.id}" />
+                                    <input type="submit" name="action" value="Deactivate" />
+                                </div>
+                                <div>
+                                    <input type="submit" name="action" value="Reactivate" />
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+
+
+                </table>
+            </div>
+        </div>
+
+
+
+    </header>
+
+    <script>
+        var a = document.getElementById("a");
+        var b = document.getElementById("b");
+        var headerHeight1 = b.clientHeight;
+
+        a.onclick = function () {
+            a.classList.toggle('open');
+            b.classList.toggle('toggleHeight')
+
+            // var  isClose = b.clientHeight === headerHeight1;
+            // if(isClose){
+            //     b.style.height = "300px";
+            // }else{
+            //     b.style.height = headerHeight1;
+            // }
+        }
+
+    </script>
+</body>
+
+</html>
